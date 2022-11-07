@@ -44,7 +44,14 @@ function searchInput() {
 }
 
 function getCurrentWeather() {
-    if (condition) {
+    if (let i = 0; i < searchHistory.length; i++) {
+        localStorage.getItem("searchHistory");
+        
+    } else {
+        
+    }
+
+}
         
     } else {
         
@@ -53,7 +60,14 @@ function getCurrentWeather() {
 }
        
 function getForecast() {
-    if (condition) {
+    if (let i = 0; i < searchHistory.length; i++) {
+        localStorage.getItem("searchHistory");
+        
+    } else {
+        
+    }
+
+}
         
     } else {
         
