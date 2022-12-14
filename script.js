@@ -21,70 +21,31 @@ const searchInput = document.querySelector("#searchInput");
 const searchBtn = document.querySelector("#searchBtn");
 
 // EVENT LISTENERS
-searchBtn.addEventListener("click", searchWeather);
+searchBtn.addEventListener("click", function apiKey() {
+    const user = document.querySelector("#searchInput").value;
+    function storeClicks() {
+        storeQuery()
 history.addEventListener("click", searchHistory);
 searchWeather. addEventListener("click", searchWeather);
 
 // FUNCTIONS
 function searchBtn() {
-    if (condition) {
-        
-        
-    } else { 
-        
-    }
-
-}
+    
 function searchInput() {
-    if (condition) {
-        
-    } else {
-        
-    }
-
 }
 
 function getCurrentWeather() {
     if (let i = 0; i < searchHistory.length; i++) {
         localStorage.getItem("searchHistory");
         
-    } else {
-        
-    }
-
-}
-        
-    } else {
-        
-    }
-
-}
        
 function getForecast() {
     if (let i = 0; i < searchHistory.length; i++) {
         localStorage.getItem("searchHistory");
         
-    } else {
-        
-    }
-
-}
-        
-    } else {
-        
-    }
-
-
-}
 
 function searchHistory() {
-    if (condition) {
-        
-    } else {
-
-    } 
-
-}
+  
 /*GET LAT AND LONG OF CITIES from THE WEATHER DATA on 97*/
 function searchWeather() {
     const cityName = searchInput.value;
@@ -94,11 +55,8 @@ function searchWeather() {
         return response.json()
     })
     .then(function(data) {
-        console.log (data);
-        const lat = data[0].lat;
-        const lon = data[0].lon;
-        getCurrentWeather(lat, lon);
-        getForecast(lat, lon); 
+        console.log(data);
+
     })
 }
 
