@@ -29,6 +29,7 @@ searchWeather. addEventListener("click", searchWeather);
 function searchBtn() {
     if (condition) {
         
+        
     } else { 
         
     }
@@ -84,10 +85,27 @@ function searchHistory() {
     } 
 
 }
-    
+/*GET LAT AND LONG OF CITIES from THE WEATHER DATA on 97*/
+function searchWeather() {
+    const cityName = searchInput.value;
+    const apiURL = "http://api.openweathermap.org/geo/1.0/direct?q="+cityName+"&limit=5&appid="+apiKey;
+    fetch(apiURL)
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log (data);
+        const lat = data[0].lat;
+        const lon = data[0].lon;
+        getCurrentWeather(lat, lon);
+        getForecast(lat, lon); 
+    })
+}
+
 // LOCAL STORAGE
 localStorage.setItem("search", JSON.stringify(searchHistory));
 
 // CALLS
 searchHistory();
+
 

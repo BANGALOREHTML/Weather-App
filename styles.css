@@ -20,10 +20,17 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 26px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color: #5c5681;
 }
 
 .jumbotron {
+  background-image: linear-gradient(315deg, #2d2465 0%, #e5ede5 74%);
+    /* background-color: #f4511e; */
     font-size: x-large;
     text-align: center;
+}
+
+.grad1 {
+  background-color: #a1a1a7;
+  background-image: linear-gradient(315deg, #2d2465 0%, #3abc47 74%);
 }
